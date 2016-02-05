@@ -25,7 +25,7 @@ If you want to take a look at the test data, check out the **sgvb_fake_data_mapf
 The python script we want to run is called **graphics_maker.py**. We run it by using the following command:
 
 ```
-$ python graphics_maker.py
+$ python graphics_maker.py -file sgvb_fake_data_mapformatted.csv
 ```
 
 You should see the following text printed in your terminal:
@@ -40,3 +40,13 @@ Making graphs:
 ```
 
 It worked! Open the directory to see the new graph files in .png files.
+
+To run the script with new data, you'll need to first move the data file in the sms-graphics-maker folder, then run the command:
+
+```
+$ python .\graphics_maker.py -file my_new_data_file.csv
+```
+
+where **my_new_data_file.csv** is the name of your file.
+
+Good luck!
