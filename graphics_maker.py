@@ -4,7 +4,7 @@ import argparse
 import csv
 import sys
 
-DATAFILE = 'sgvb_fake_data_mapformatted.csv'
+DATAFILE = 'map_records.csv'
 delimiter = ','
 COLORSET = ["#a6d854","#e78ac3","#ffd92f"]
 #HEADER = ['DATE','NARRATIVE','GENDER','HEALTH','AGE','ACT','PUBLISHED']
