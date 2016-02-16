@@ -1,4 +1,4 @@
-import prettyplotlib as ppl
+#import prettyplotlib as ppl
 import matplotlib.pyplot as plt
 import argparse
 import csv
@@ -44,7 +44,8 @@ def plot(labels,sublabels,data,x,y):
 	colors = {sl: COLORSET[i] for i, sl in enumerate(sublabels)}
 	width = 0.3
 	for i,sl in enumerate(sublabels):
-		ppl.bar(ax, [w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, grid='y', color = colors[sublabels[i]])
+		#ppl.bar(ax, [w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, grid='y', color = colors[sublabels[i]])
+		ax.bar([w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, color = colors[sublabels[i]])
 	ax.set_xticks([w + width for w in range(len(labels))])
 	ax.set_xticklabels(labels)
 	ax.set_title("Count of {1}s by {0} of victims".format(x.replace('_',' '),y.replace('_',' ')))
