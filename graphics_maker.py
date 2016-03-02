@@ -6,10 +6,11 @@ import sys
 
 DATAFILE = 'map_records.csv'
 delimiter = ','
-COLORSET = ["#a6d854","#e78ac3","#ffd92f"]
+COLORSETMORE = ["#fcd2a4","#fbaf5d","#f7941d","#f26c4f","#ed1c24","#9e0b0f"]
+COLORSET2 = ["#ff7f00","#0080ff"]
 #HEADER = ['DATE','NARRATIVE','GENDER','HEALTH','AGE','ACT','PUBLISHED']
 HEADER = ["Title","Narrative","Date","Map filter #1","Map filter #2","Map filter #3","Map filter #4","Published"]
-mapfilternames = {"Map filter #1":"gender","Map filter #2":"health","Map filter #3":"age","Map filter #4":"violent_act"}
+mapfilternames = {"Map filter #1":"gender","Map filter #2":"health","Map filter #3":"age_range","Map filter #4":"violent_act"}
 
 # def check(row):
 # 	for item in row:
@@ -27,21 +28,51 @@ def import_data(datafile):
 		data = []
 		for row in reader:
 			if first:
-				header = row
+				header = [item.replace("Filter", "filter") for item in row]
 				first = False
 			else:
 				data.append(row)
 
 	if header != HEADER:
 		print "Header needs to be checked"
+		print header
+		print HEADER
 		sys.exit()
 
 	print "\nReading .csv file:", datafile, "\n"
 	return data, header
 
+def is_int(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+def sortlabels(labels):
+	numerical = True
+	for l in labels:
+	    if is_int(l.replace('+','').split('-')[0]) == False:
+	    	numerical = False
+	    else:
+	    	print l
+	if numerical:
+		parsed = [(l, int(l.replace('+','').split('-')[0])) for l in labels]
+		newparsed = sorted(parsed, key = lambda x: x[1])
+		print newparsed
+		newlabels = zip(*newparsed)[0]
+	else:
+		labels.sort()
+		newlabels = labels
+	return newlabels
+
 def plot(labels,sublabels,data,x,y):
 	fig, ax = plt.subplots(1)
-	colors = {sl: COLORSET[i] for i, sl in enumerate(sublabels)}
+	sublabels = sortlabels(sublabels)
+	if len(sublabels)<=2:
+		colors = {sl: COLORSET2[i] for i, sl in enumerate(sublabels)}
+	else:
+		colors = {sl: COLORSETMORE[i] for i, sl in enumerate(sublabels)}
 	width = 0.3
 	for i,sl in enumerate(sublabels):
 		#ppl.bar(ax, [w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, grid='y', color = colors[sublabels[i]])
@@ -55,19 +86,19 @@ def plot(labels,sublabels,data,x,y):
 	print "\t", filename
 	return None
 
-def bar_gender_by_act(data, header):
-	gender_column = header.index('GENDER')+1
-	act_column = header.index('ACT')+1
-	acts = zip(*data)[act_column]
-	genders = zip(*data)[gender_column]
-	organized_data = {k:{l:0 for l in set(genders)}for k in set(acts)}
-	for act,gender in zip(acts,genders):
-		organized_data[act][gender]+=1
-	plot(list(set(acts)),list(set(genders)),organized_data,"bar_gender_by_act")
-	return None
+# def bar_gender_by_act(data, header):
+# 	gender_column = header.index('GENDER')+1
+# 	act_column = header.index('ACT')+1
+# 	acts = zip(*data)[act_column]
+# 	genders = zip(*data)[gender_column]
+# 	organized_data = {k:{l:0 for l in set(genders)}for k in set(acts)}
+# 	for act,gender in zip(acts,genders):
+# 		organized_data[act][gender]+=1
+# 	plot(list(set(acts)),list(set(genders)),organized_data,"bar_gender_by_act")
+# 	return None
 
 def make_bar_charts(data, header):
-	X = ['Map filter #1','Map filter #2']
+	X = ['Map filter #1','Map filter #2','Map filter #3']
 	Y = ['Map filter #4']
 	print "Making graphs:"
 	for x in X:
