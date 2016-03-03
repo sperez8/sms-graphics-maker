@@ -8,23 +8,12 @@ DATAFILE = 'map_records.csv'
 delimiter = ','
 #COLORSETMORE = ["#fcd2a4","#fbaf5d","#f7941d","#f26c4f","#ed1c24","#9e0b0f"]
 
-COLORSETMORE = ["#EC5E0C","#6D2243","#BA2640","#F78F1E","#85871A"]
+COLORSET2 = ["#BA2640","#1756ab"]
+COLORSETMORE = ["#EC5E0C","#6D2243","#BA2640","#F78F1E","#85871A","#280904","#1756ab"]
 COLORSETMOREORDER = ["#85871A","#F78F1E","#EC5E0C","#BA2640","#6D2243"]
 
-
-
-COLORSET2 = ["#ff7f00","#0080ff"]
-#HEADER = ['DATE','NARRATIVE','GENDER','HEALTH','AGE','ACT','PUBLISHED']
 HEADER = ["Title","Narrative","Date","Map filter #1","Map filter #2","Map filter #3","Map filter #4","Published"]
-mapfilternames = {"Map filter #1":"gender","Map filter #2":"health","Map filter #3":"age_range","Map filter #4":"violent_act"}
-
-# def check(row):
-# 	for item in row:
-# 		if item[0]!='"' and item[-1]!='"':
-# 			print row
-# 			print "There is a comma in one of the narrative that is causing problems in parsing the file. Please remove it and try again"
-# 			sys.exit()
-# 	return None
+mapfilternames = {'Title':'organization_code',"Map filter #1":"gender","Map filter #2":"health","Map filter #3":"age_range","Map filter #4":"violent_act"}
 
 def import_data(datafile):
 	with open(datafile, 'r') as myfile:
@@ -37,7 +26,8 @@ def import_data(datafile):
 				header = [item.replace("Filter", "filter") for item in row]
 				first = False
 			else:
-				data.append(row)
+
+				data.append(clean_row(row))
 
 	if header != HEADER:
 		print "Header needs to be checked"
@@ -45,6 +35,13 @@ def import_data(datafile):
 
 	print "\nReading .csv file:", datafile, "\n"
 	return data, header
+
+def clean_row(row):
+	newrow = []
+	title = row[0].split('-')[1:]
+	newrow = row[1:]
+	newrow.insert(0,'-'.join(title))
+	return newrow
 
 def is_int(s):
     try:
@@ -70,40 +67,39 @@ def sortlabels(labels):
 def plot(labels,sublabels,data,x,y):
 	fig, ax = plt.subplots(1)
 	sublabels = sortlabels(sublabels)
+	width = 0.8/float(len(sublabels))
 	if len(sublabels)<=2:
-		colors = {sl: COLORSETMORE[i] for i, sl in enumerate(sublabels)}
-		width = 0.4
-	else:
+		colors = {sl: COLORSET2[i] for i, sl in enumerate(sublabels)}
+	elif len(sublabels) <= len(COLORSETMOREORDER):
 		colors = {sl: COLORSETMOREORDER[i] for i, sl in enumerate(sublabels)}
-		width = 0.15
+	else:
+		infinitepalette = COLORSETMORE
+		while len(infinitepalette) < len(sublabels):
+			infinitepalette.extend(COLORSETMORE)
+		colors = {sl: infinitepalette[i] for i, sl in enumerate(sublabels)}
 	max_y = 0
 	for i,sl in enumerate(sublabels):
 		#ppl.bar(ax, [w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, grid='y', color = colors[sublabels[i]])
-		ax.bar([w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, color = colors[sublabels[i]])
+		ax.bar([w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, color = colors[sublabels[i]], align='center')
 		max_y = max(max_y,max([data[category][sl] for category in labels]))
-	ax.set_xticks([w + width for w in range(len(labels))])
+	ax.set_xticks([w + width*2 for w in range(len(labels))])
 	ax.set_xticklabels(labels)
-	ax.set_title("Count of {1}s by {0} of victims".format(x.replace('_',' '),y.replace('_',' ')))
-	ax.legend(sublabels)
+	ax.set_title("Count of {1}s by {0}".format(x.replace('_',' '),y.replace('_',' ')),fontsize=16,y=1.03)
 	ax.set_ylim([0,max_y*1.1])
+	max_x = ax.get_xlim()[1]
+	ax.set_xlim([-0.5,max_x])
+	# Shrink current axis by 20%
+	box = ax.get_position()
+	ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
+	# Put a legend to the right of the current axis
+	ax.legend(sublabels,loc='center left', bbox_to_anchor=(1, 0.5))
 	filename = "bar_{0}_by_{1}.png".format(x,y)
 	fig.savefig(filename)
 	print "\t", filename
 	return None
 
-# def bar_gender_by_act(data, header):
-# 	gender_column = header.index('GENDER')+1
-# 	act_column = header.index('ACT')+1
-# 	acts = zip(*data)[act_column]
-# 	genders = zip(*data)[gender_column]
-# 	organized_data = {k:{l:0 for l in set(genders)}for k in set(acts)}
-# 	for act,gender in zip(acts,genders):
-# 		organized_data[act][gender]+=1
-# 	plot(list(set(acts)),list(set(genders)),organized_data,"bar_gender_by_act")
-# 	return None
-
 def make_bar_charts(data, header):
-	X = ['Map filter #1','Map filter #2','Map filter #3']
+	X = ['Title','Map filter #1','Map filter #2','Map filter #3']
 	Y = ['Map filter #4']
 	print "Making graphs:"
 	for x in X:
