@@ -6,7 +6,13 @@ import sys
 
 DATAFILE = 'map_records.csv'
 delimiter = ','
-COLORSETMORE = ["#fcd2a4","#fbaf5d","#f7941d","#f26c4f","#ed1c24","#9e0b0f"]
+#COLORSETMORE = ["#fcd2a4","#fbaf5d","#f7941d","#f26c4f","#ed1c24","#9e0b0f"]
+
+COLORSETMORE = ["#EC5E0C","#6D2243","#BA2640","#F78F1E","#85871A"]
+COLORSETMOREORDER = ["#85871A","#F78F1E","#EC5E0C","#BA2640","#6D2243"]
+
+
+
 COLORSET2 = ["#ff7f00","#0080ff"]
 #HEADER = ['DATE','NARRATIVE','GENDER','HEALTH','AGE','ACT','PUBLISHED']
 HEADER = ["Title","Narrative","Date","Map filter #1","Map filter #2","Map filter #3","Map filter #4","Published"]
@@ -35,8 +41,6 @@ def import_data(datafile):
 
 	if header != HEADER:
 		print "Header needs to be checked"
-		print header
-		print HEADER
 		sys.exit()
 
 	print "\nReading .csv file:", datafile, "\n"
@@ -54,12 +58,9 @@ def sortlabels(labels):
 	for l in labels:
 	    if is_int(l.replace('+','').split('-')[0]) == False:
 	    	numerical = False
-	    else:
-	    	print l
 	if numerical:
 		parsed = [(l, int(l.replace('+','').split('-')[0])) for l in labels]
 		newparsed = sorted(parsed, key = lambda x: x[1])
-		print newparsed
 		newlabels = zip(*newparsed)[0]
 	else:
 		labels.sort()
@@ -70,17 +71,21 @@ def plot(labels,sublabels,data,x,y):
 	fig, ax = plt.subplots(1)
 	sublabels = sortlabels(sublabels)
 	if len(sublabels)<=2:
-		colors = {sl: COLORSET2[i] for i, sl in enumerate(sublabels)}
-	else:
 		colors = {sl: COLORSETMORE[i] for i, sl in enumerate(sublabels)}
-	width = 0.3
+		width = 0.4
+	else:
+		colors = {sl: COLORSETMOREORDER[i] for i, sl in enumerate(sublabels)}
+		width = 0.15
+	max_y = 0
 	for i,sl in enumerate(sublabels):
 		#ppl.bar(ax, [w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, grid='y', color = colors[sublabels[i]])
 		ax.bar([w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, color = colors[sublabels[i]])
+		max_y = max(max_y,max([data[category][sl] for category in labels]))
 	ax.set_xticks([w + width for w in range(len(labels))])
 	ax.set_xticklabels(labels)
 	ax.set_title("Count of {1}s by {0} of victims".format(x.replace('_',' '),y.replace('_',' ')))
 	ax.legend(sublabels)
+	ax.set_ylim([0,max_y*1.1])
 	filename = "bar_{0}_by_{1}.png".format(x,y)
 	fig.savefig(filename)
 	print "\t", filename
