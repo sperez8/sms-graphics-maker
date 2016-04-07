@@ -34,13 +34,24 @@ def import_data(datafile):
 		sys.exit()
 
 	print "\nReading .csv file:", datafile, "\n"
+	data = remove_duplicates(data)
 	return data, header
+
+def remove_duplicates(data):
+	new_data = []
+	for row in data:
+		if row not in new_data:
+			new_data.append(row)
+	return new_data
+
+
 
 def clean_row(row):
 	newrow = []
 	title = row[0].split('-')[1:]
 	newrow = row[1:]
 	newrow.insert(0,'-'.join(title))
+	newrow = ["NA" if x=='' or x==' ' else x for x in newrow]
 	return newrow
 
 def is_int(s):
