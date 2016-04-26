@@ -1,101 +1,65 @@
-Title,Narrative,Date,Map filter #1,Map filter #2,Map filter #3,Map filter #4,Published
-040515-JB,"early morning incident","Tuesday, February 16, 2016 - 05:30",Male,Healthy,51+,Rape,No
-280315-JB,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,51+,Gang rape,Yes
-100215-JB,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Healthy,51+,Incest,Yes
-080715-JB,"early morning incident","Tuesday, February 16, 2016 - 05:30",Male,Injured,51+,Rape,Yes
-150915-JB,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,51+,Incest,No
-120715-JB,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Injured,51+,Rape,No
-081115-JB,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Healthy,51+,Threat,Yes
-170815-JB,"happened at night","Sunday, July 5, 2015 - 00:00",Female,Healthy,18-34,Gang rape,No
-171115-JB,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Injured,51+,Gang rape,No
-240215-JB,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Injured,51+,Gang rape,Yes
-290615-JB,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Injured,51+,Threat,No
-190115-JB,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Injured,51+,Rape,Yes
-141115-JB,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Healthy,51+,Gang rape,No
-060715-JB,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Gang rape,Yes
-010515-cepo-rb,"happened at night","Sunday, July 5, 2015 - 00:00",Female,Healthy,18-34,Incest,No
-270515-cepo-rb,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Injured,51+,Assault,No
-030415-cepo-rb,"happened at night","Sunday, July 5, 2015 - 00:00",Female,Healthy,51+,Incest,No
-250915-cepo-rb,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Healthy,51+,Incest,No
-070215-cepo-rb,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Healthy,51+,Assault,Yes
-090415-cepo-rb,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Healthy,51+,Rape,No
-150115-cepo-rb,"early morning incident","Tuesday, February 16, 2016 - 05:30",Male,Injured,51+,Gang rape,No
-180415-cepo-rb,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Injured,18-34,Assault,Yes
-240715-cepo-rb,"happened at night","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Incest,Yes
-190415-cepo-rb,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Rape,No
-160415-cepo-rb,"early morning incident","Tuesday, February 16, 2016 - 05:30",Male,Injured,18-34,Threat,Yes
-131015-cepo-rb,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Rape,Yes
-120715-cepo-rb,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Healthy,18-34,Threat,No
-041015-cepo-rb,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Threat,No
-230315-pg-lh,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Incest,No
-290515-pg-lh,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Gang rape,Yes
-171115-pg-lh,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Assault,Yes
-210515-pg-lh,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Assault,No
-030415-pg-lh,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Rape,Yes
-040615-pg-lh,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Rape,No
-240115-pg-lh,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Healthy,45-50,Assault,Yes
-141115-pg-lh,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Injured,45-50,Threat,Yes
-060215-pg-lh,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Assault,No
-180115-pg-lh,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Healthy,45-50,Assault,No
-050815-pg-lh,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Gang rape,No
-220715-pg-lh,"happened at night","Sunday, July 5, 2015 - 00:00",Female,Injured,45-50,Gang rape,Yes
-270515-pg-lh,"early morning incident","Tuesday, February 16, 2016 - 05:30",Male,Injured,45-50,Rape,Yes
-090615-pg-lh,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,45-50,Incest,No
-211115-pg-lh,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Injured,45-50,Rape,Yes
-210515-pg-lh,"happened at night","Sunday, July 5, 2015 - 00:00",Female,Healthy,45-50,Threat,No
-271115-pg-lh,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Injured,45-50,Assault,Yes
-280215-MM,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Threat,No
-250215-MM,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,12-17,Gang rape,No
-150515-MM,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Injured,12-17,Threat,No
-020315-MM,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Healthy,12-17,Incest,No
-160915-MM,"early morning incident","Tuesday, February 16, 2016 - 05:30",Male,Healthy,12-17,Gang rape,Yes
-020215-MM,"early morning incident","Tuesday, February 16, 2016 - 05:30",Male,Healthy,12-17,Assault,Yes
-081015-MM,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Injured,12-17,Assault,Yes
-151015-MM,"early morning incident","Tuesday, February 16, 2016 - 05:30",Male,Injured,12-17,Incest,No
-070715-IPCA-CA,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Healthy,12-17,Incest,No
-030615-IPCA-CA,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Injured,12-17,Gang rape,No
-260115-IPCA-CA,"happened at night","Sunday, July 5, 2015 - 00:00",Female,Injured,45-50,Gang rape,Yes
-210815-IPCA-CA,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Assault,Yes
-240615-IPCA-CA,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Injured,45-50,Incest,Yes
-100915-IPCA-CA,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Injured,45-50,Assault,No
-281015-KC,"early morning incident","Tuesday, February 16, 2016 - 05:30",Male,Injured,45-50,Rape,Yes
-260515-KC,"happened at night","Sunday, July 5, 2015 - 00:00",Female,Healthy,45-50,Rape,No
-220615-KC,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Injured,45-50,Assault,Yes
-140215-KC,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Injured,18-34,Threat,No
-190815-KC,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,0-12,Threat,Yes
-180615-KC,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Healthy,0-12,Incest,No
-200815-KC,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Healthy,0-12,Threat,No
-270415-KC,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Injured,0-12,Threat,Yes
-050215-KC,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Healthy,0-12,Threat,No
-221115-KC,"early morning incident","Tuesday, February 16, 2016 - 05:30",Male,Healthy,0-12,Threat,No
-270515-KC,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Healthy,0-12,Incest,No
-050415-gnwp-mc,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Injured,0-12,Gang rape,No
-270415-gnwp-mc,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Injured,0-12,Assault,Yes
-010615-gnwp-mc,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Healthy,18-34,Incest,No
-250715-gnwp-mc,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,45-50,Assault,Yes
-031115-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Assault,Yes
-280115-gnwp-mc,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,45-50,Incest,Yes
-150115-gnwp-mc,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Threat,No
-170715-gnwp-mc,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,45-50,Gang rape,No
-191115-gnwp-mc,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Healthy,45-50,Gang rape,Yes
-170115-gnwp-mc,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Injured,45-50,Assault,No
-220615-gnwp-mc,"multiple victims affected","Tuesday, February 16, 2016 - 05:30",Male,Injured,45-50,Rape,No
-100115-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Rape,No
-110415-gnwp-mc,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Injured,45-50,Incest,No
-200815-gnwp-mc,"early morning incident","Sunday, July 5, 2015 - 00:00",Female,Healthy,45-50,Rape,No
-141015-gnwp-mc,"happened at night","Tuesday, February 16, 2016 - 05:30",Male,Healthy,18-34,Assault,Yes
-041115-gnwp-mc,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Injured,18-34,Incest,No
-091115-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Healthy,18-34,Rape,No
-131115-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Assault,Yes
-220415-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Threat,No
-090715-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Healthy,18-34,Threat,No
-180315-gnwp-mc,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Injured,18-34,Threat,No
-050615-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Healthy,18-34,Gang rape,No
-250115-gnwp-mc,"happened at night","Sunday, July 5, 2015 - 00:00",Female,Healthy,18-34,Gang rape,Yes
-140715-gnwp-mc,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Healthy,18-34,Threat,No
-200615-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Healthy,18-34,Rape,Yes
-230215-gnwp-mc,"women was at the market","Tuesday, February 16, 2016 - 05:30",Male,Injured,18-34,Assault,Yes
-280315-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Incest,No
-270615-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Healthy,18-34,Incest,Yes
-060515-gnwp-mc,"multiple victims affected","Sunday, July 5, 2015 - 00:00",Female,Healthy,18-34,Threat,No
-170915-gnwp-mc,"women was at the market","Sunday, July 5, 2015 - 00:00",Female,Injured,18-34,Rape,No
+"Title","Narrative","Date","Map filter #1","Map filter #2","Map Filter #3","Map Filter #4","Published"
+"231114RAJ JC."," girl was raped on the way to cattle camp by six young men cattle keepers from a nearby community of Abiriu she is in cueibet hospital for 2 weeks.
+ ","Monday, March 14, 2016 - 13:45","Female","Healthy","05-17","Rape","Yes"
+"051114 gg-gg","a young woman ....
+","Wednesday, November 5, 2014 - 00:00","Female","Healthy","05-17","Sexual Assault","Yes"
+"210315 VOH- MA"," A younger girl was rapped last night by 55 watchman in school when she remain behind for her class. 
+ ","Saturday, March 21, 2015 - 16:00","Female","Healthy","05-17","Gang Rape","Yes"
+"051115 UJOSS-Flo","A young girl was attacked by her uncle while collecting water near the center. She is recovering at home with her mother.
+","Thursday, November 5, 2015 - 00:00","Female","Healthy","05-17","Incest","Yes"
+"210315-VOH-MA","A younger girl was rapped last night by 55 watchman in school when she remain behind for her class.
+","Saturday, March 21, 2015 - 00:00","Female","Healthy","05-17","Rape","Yes"
+"051125-CSHRF-BA","A young girl was attacked by her uncle while collecting water near the town center. She is recovering at home with her mother
+","Wednesday, November 5, 2025 - 00:00","Female","Healthy","05-17","Incest","Yes"
+"051125-EV-AA","An old lady was attacked by 4 street boys while urinating outside her house at 10:00 pm night in manyata. She is now admitted at Tonj civil hospital.
+","Wednesday, November 5, 2025 - 00:00","Female","Physically Disabled","45-50","Gang Rape","Yes"
+"051215-SSLS"," g A 26 year old man in was gang raped by armed men near terekeka at 10pm
+ ","Saturday, December 5, 2015 - 00:00","Male","Mentally Disabled","18-34","Sexual Assault","Yes"
+"051124-RAJ-LA","A young girl was attacked by her uncle while collecting water near the town center.She is recovering at home with her mother.
+","Tuesday, November 5, 2024 - 00:00","Female","Healthy","05-17","Incest","Yes"
+"231114-RAR"," r an elderly woman in a wheelchair was raped in her home in Juba at dinner time by members from a nearby community. she is in hospital.
+ ","Sunday, November 23, 2014 - 00:00","Female","Physically Disabled","51+","Rape","Yes"
+"051125-EV-AA","An old lady was attacked by 4 street boys while urinating outside her house at 10:00 pm night in manyata. She is now admitted at Tonj civil hospital.
+","Wednesday, November 5, 2025 - 00:00","Female","Physically Disabled","45-50","Gang Rape","Yes"
+"051115-IPCA-PA","A young girl was attacked by her uncle while collecting water near the town centre. She is recovering at home with her mother.
+","Thursday, November 5, 2015 - 00:00","Female","Healthy","05-17","Incest","Yes"
+"210315-RB","A 40 year old man in was attacked raped by armed men near the military base at night time.
+","Saturday, March 21, 2015 - 00:00","Male","Healthy","35-44","Sexual Assault","Yes"
+"051215-RB","A 26 year old man in was gang raped by armed men near Terekeka at 10pm.
+","Saturday, December 5, 2015 - 00:00","Male","Healthy","18-34","Gang Rape","Yes"
+"231114-PG-JK","An elderly women in a wheelchair was raped in her home in juba at dinner time by member from a nearby community. she is in hospital,
+","Sunday, November 23, 2014 - 00:00","Female","Physically Disabled","51+","Rape","Yes"
+"22022016-RB"," young girl was attacked on her way home from school near the general store.
+ ","Sunday, February 21, 2016 - 23:00","Female","Healthy","05-17","Sexual Assault","Yes"
+"050116 CEPO"," a man was
+ ","Tuesday, February 16, 2016 - 22:45","Male","Healthy","05-17","Harassment","Yes"
+"010525-rb"," a teacher was ....
+ ","Thursday, May 1, 2025 - 00:00","Female","Mentally Disabled","18-34","Harassment","Yes"
+"050116-CEPO"," s  a man was ...
+ ","Tuesday, January 5, 2016 - 00:00","Male","Mentally Disabled","05-17","Gang Rape","Yes"
+"16022016-pg-jk"," an elderly woman was ...
+ ","Tuesday, February 16, 2016 - 09:00","Female","Healthy","51+","Rape","Yes"
+"061115-gnwp-mc","a young girl was harassed by men in mayom
+","Friday, November 6, 2015 - 00:00","Female","Mentally Disabled","18-34","Harassment","Yes"
+"051114-gg-gg"," A young woman ....
+ ","Sunday, May 11, 2014 - 22:15","Female","Healthy","05-17","Sexual Assault","Yes"
+"231014-PG-LR"," An elderly woman in a wheelchair was threatened by armed men in her home.
+ ","Thursday, October 23, 2014 - 00:00","Female","Physically Disabled","51+","Threats","Yes"
+"050715-cepo-pr","a woman was attacked by her husband in her home.
+","Sunday, July 5, 2015 - 00:00","Female","Healthy","18-34","Domestic Violence","Yes"
+"050715-hui-pt","a woman was attacked by her husband at home.
+","Sunday, July 5, 2015 - 00:00","Female","Healthy","18-34","Domestic Violence","Yes"
+"011015-pg-lh"," an elderly woman was threatened by armed men in Pachalla.
+ ","Thursday, October 1, 2015 - 00:00","Female","Physically Disabled","51+","Threats","Yes"
+"16022016-IPCA-PA"," A 25 year old girl was sexually assulted by a boy who lives at the neigborhood.
+ ","Monday, February 15, 2016 - 06:00","Female","Healthy","18-34","Sexual Assault","Yes"
+"16022016-KC"," of 5 years was harrashed near university. roundabout
+ ","Sunday, February 14, 2016 - 03:30","Female","Healthy","05-17","Harassment","Yes"
+"16022016-MM"," A 20 year old girl was raped under gun point
+ ","Saturday, February 13, 2016 - 05:30","Female","Healthy","18-34","Rape","Yes"
+"23115-JB"," year old girl was defile by a man of 35 years while hear mother was at the borehole
+ ","Monday, November 23, 2015 - 00:00","Female","Healthy","05-17","Defilement","Yes"
+"051215-RB","A 26 year old man was gang raped by armed men near the barraks at 10PM
+","Saturday, December 5, 2015 - 00:00","Male","Healthy","18-34","Gang Rape","Yes"
+"210415-cepo-rb","a woman was gang raped in warrap near the primary school
+","Tuesday, April 21, 2015 - 00:00","Female","Physically Disabled","45-50","Gang Rape","Yes"

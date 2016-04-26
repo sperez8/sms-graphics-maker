@@ -1,5 +1,6 @@
 #import prettyplotlib as ppl
 import matplotlib.pyplot as plt
+from wordcloud import WordCloud, STOPWORDS
 import argparse
 import csv
 import sys
@@ -129,7 +130,20 @@ def make_bar_charts(data, header):
 			for act,filter in zip(acts,filters):
 				organized_data[act][filter]+=1
 			plot(list(set(acts)),list(set(filters)),organized_data,mapfilternames[x],mapfilternames[y])
-	print "\n"
+	return None
+
+def get_narratives(data,header):
+	narrative_column = header.index("Narrative")
+	narratives = zip(*data)[narrative_column]
+	text = ' '.join(narratives)
+	return text
+
+def make_wordcloud(data,header):
+	text = get_narratives(data,header)
+	wordcloud = WordCloud(max_font_size=40, relative_scaling=.5, background_color="white",margin=3, prefer_horizontal=1, stopwords=STOPWORDS)
+	wordcloud.generate(text)
+	wordcloud.to_file("wordcloud.png")
+	print "Making wordcloud:\n\t wordcloud.png\n"
 	return None
 
 def main(*argv):
@@ -140,6 +154,7 @@ def main(*argv):
 
 	data,header =  import_data(args.file)
 	make_bar_charts(data,header)
+	make_wordcloud(data,header)
 
 if __name__ == "__main__":
 	main(*sys.argv[1:])
