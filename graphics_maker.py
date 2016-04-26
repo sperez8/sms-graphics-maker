@@ -45,7 +45,6 @@ def remove_duplicates(data):
 	return new_data
 
 
-
 def clean_row(row):
 	newrow = []
 	title = row[0].split('-')[1:]
@@ -76,7 +75,7 @@ def sortlabels(labels):
 	return newlabels
 
 def plot(labels,sublabels,data,x,y):
-	fig, ax = plt.subplots(1)
+	fig, ax = plt.subplots(1,figsize=(20, 6))
 	sublabels = sortlabels(sublabels)
 	width = 0.8/float(len(sublabels))
 	if len(sublabels)<=2:
@@ -91,10 +90,16 @@ def plot(labels,sublabels,data,x,y):
 	max_y = 0
 	for i,sl in enumerate(sublabels):
 		#ppl.bar(ax, [w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, grid='y', color = colors[sublabels[i]])
-		ax.bar([w + width*i for w in range(len(labels))], [data[category][sl] for category in labels], width, color = colors[sublabels[i]], align='center')
+		ax.bar([w + width*i for w in range(len(labels))], [data[category][sl] if data[category][sl] > 0 else 0.1 for category in labels], width, color = colors[sublabels[i]], align='center')
 		max_y = max(max_y,max([data[category][sl] for category in labels]))
-	ax.set_xticks([w + width*2 for w in range(len(labels))])
+
+	#ax.plot([0.1 for point in range(len(labels)+2)], linestyle='-', color='black', linewidth=1)
+	ax.set_xticks([w + width*(len(sublabels)-1)/2 for w in range(len(labels))])
 	ax.set_xticklabels(labels)
+	yticks = [0.1]
+	yticks.extend([tick for tick in range(2,max_y+1,2)])
+	ax.set_yticks(yticks)
+	ax.set_yticklabels([str(tick) if tick>=1 else "0" for tick in yticks])
 	ax.set_title("Count of {1}s by {0}".format(x.replace('_',' '),y.replace('_',' ')),fontsize=16,y=1.03)
 	ax.set_ylim([0,max_y*1.1])
 	max_x = ax.get_xlim()[1]
@@ -104,6 +109,7 @@ def plot(labels,sublabels,data,x,y):
 	ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
 	# Put a legend to the right of the current axis
 	ax.legend(sublabels,loc='center left', bbox_to_anchor=(1, 0.5))
+	ax.axhline(y=.1, xmin=0, xmax=len(labels), linewidth=1, color = 'k')
 	filename = "bar_{0}_by_{1}.png".format(x,y)
 	fig.savefig(filename)
 	print "\t", filename
